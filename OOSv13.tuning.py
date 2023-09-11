@@ -2,7 +2,7 @@
 #python OOSv12.tuning.py -f="jkp_ff_monthly.csv" -p="JKPFF" -w=120 -t=50 -q=120 -m="XGB" 
 # "RF"  "XGB" "NNKeras" "ENET" "LGBM" "LASSO"  "RIDGE" 
 
-# python OOSv13.tuning.py -f="gw.data.csv" -p="GWRFF" -w=12 -t=25 -q=12 -r=False -m="RIDGE" 
+# python OOSv13.tuning.py -f="goyal_welch.1929.2022.standardized.csv" -p="GWRFF" -w=12 -t=25 -q=12 -r -m="RIDGE"
 
 import time
 import pandas as pd
@@ -15,7 +15,7 @@ from sklearn.decomposition import PCA
 from sklearn.ensemble import RandomForestRegressor
 from sklearn.neural_network import MLPRegressor
 from sklearn.model_selection import TimeSeriesSplit
-from sklearn.preprocessing import StandardScalerp
+from sklearn.preprocessing import StandardScaler
 from sklearn.feature_selection import VarianceThreshold
 from xgboost import XGBRegressor
 
